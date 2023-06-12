@@ -3,7 +3,9 @@
 function sendPostRequest() {
     const userId = document.getElementById('userId').value;
     const title = document.getElementById('title').value;
-    const body = document.getElementById('body').value;
+    const completed = document.getElementById('completed').checked;
+
+    completed == "on" ? "true" : "false";
 
     let myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");

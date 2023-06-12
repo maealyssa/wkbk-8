@@ -21,33 +21,44 @@
     <nav class="navbar navbar-expand navbar-light bg-light">
         <ul class="nav navbar-nav">
             <li class="nav-item">
-                <a class="nav-link active" href="index.html" aria-current="page">Home<span class="visually-hidden">(current)</span></a>
+                <a class="nav-link" href="index.html" aria-current="page">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="new-todo.html">Todo</a>
+                <a class="nav-link active" href="new-todo.html">Todo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="edit-todo.html"> Edit Todo</a>
             </li>
         </ul>
     </nav>
   </header>
   <main>
-    <h1>Send POST Request</h1>
+    <div class="container w-50 mt-4">
+    <h3 class="text-center">Send POST Request</h3>
+    <form>
+      <div class="form-group pb-4">
+        <label for="userId">User ID:</label>
+        <input type="number" class="form-control" id="userId" placeholder="Enter User Id">
+      </div>
 
-    <div>
-      <label for="userId">User ID:</label>
-      <input type="number" id="userId" required>
+      <div class="form-group pb-2">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control" id="title" placeholder="Title">
+      </div>
+
+      <br>
+
+      <div class="form-check">
+        <label class="form-check-label" for="completed">Completed</label>
+        <input type="checkbox" class="form-check-input" id="completed">
+      </div>
+
+      <br>
+
+      <button onclick="sendPostRequest()" class="btn btn-outline-dark ">Post Request</button>
+
+    </form>
     </div>
-  
-    <div>
-      <label for="title">Title:</label>
-      <input type="text" id="title" required>
-    </div>
-  
-    <div>
-      <label for="body">Body:</label>
-      <textarea id="body" required></textarea>
-    </div>
-  
-    <button onclick="sendPostRequest()">Send POST Request</button>
   </main>
   <footer>
     <!-- place footer here -->
